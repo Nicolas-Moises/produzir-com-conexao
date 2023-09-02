@@ -28,7 +28,7 @@ export function Header() {
 
     return (
         <header className="bg-[#036c5f]">
-            <div className="flex items-center justify-between w-full max-w-7xl mx-auto py-4">
+            <div className="flex items-start justify-between w-full max-w-7xl mx-auto py-6">
                 <Image className="w-32" src={logo} alt="" width={200} height={200} />
 
                 <nav>
