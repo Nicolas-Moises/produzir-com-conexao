@@ -4,8 +4,8 @@ import pattern from '../../public/pattern-about.png'
 
 export function AboutUs() {
     return (
-        <section className="bg-white w-full relative">
-            <div className="w-full max-w-7xl flex items-end mx-auto pt-20 pb-44 overflow-hidden">
+        <section className="bg-white w-full relative rounded-b-3xl">
+            <div className="w-full max-w-7xl flex items-end mx-auto pt-20 pb-52 overflow-hidden">
                 <Image
                     src={aboutus}
                     alt=""
@@ -14,21 +14,20 @@ export function AboutUs() {
                     width={1035}
                     height={1475}
                 />
-                <div className="flex-1 flex flex-col items-start gap-6 -ml-36 -mb-20 p-16 rounded-3xl border border-[#DA4669] bg-white shadow-xl z-20">
+                <div className="flex-1 flex flex-col items-start gap-6 -ml-36 -mb-32 p-16 rounded-3xl border border-[#DA4669] bg-white shadow-xl z-20">
                     <h2 className="text-4xl font-title-bold text-zinc-800">Mas, quem somos?</h2>
 
-                    <div>
-                        <p className="medium text-zinc-600 max-w-xl">
+                    <div className="space-y-2">
+                        <p className="medium text-zinc-600 max-w-3xl">
                             Oferecemos treinamentos personalizados alinhados com a estratégia da empresa, usando experiências
                             para fortalecer as equipes.
                         </p>
-                        <p className="medium text-zinc-600 max-w-xl">
-                            Oferecemos treinamentos personalizados alinhados com a estratégia da empresa, usando experiências
-                            para fortalecer as equipes.
+                        <p className="medium text-zinc-600 max-w-3xl">
+                            Somos especializados em desenvolvimento humano, com foco em comportamento e habilidades interpessoais.
                         </p>
-                        <p className="medium text-zinc-600 max-w-xl">
-                            Oferecemos treinamentos personalizados alinhados com a estratégia da empresa, usando experiências
-                            para fortalecer as equipes.
+                        <p className="medium text-zinc-600 max-w-3xl">
+                            Acreditamos que o trabalho não é apenas nossas tarefas, mas também como nos sentimos e nos destacamos. Nossas
+                            ações moldam o sucesso e pessoas mais felizes, são mais produtivas.
                         </p>
                     </div>
                     <div className="flex items-center gap-4">
@@ -38,7 +37,7 @@ export function AboutUs() {
                         </button>
                         <button
                             className="px-6 py-3 rounded-full border border-[#2c2c2e] bg-transparent hover:opacity-80 text-2c2c2e font-medium text-sm transition-colors duration-150">
-                            Sobre nós
+                            Alguma dúvida?
                         </button>
                     </div>
                 </div>
