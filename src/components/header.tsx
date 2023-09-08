@@ -1,5 +1,7 @@
+'use client'
 import Image from "next/image";
 import logo from '../../public/logo-produzir.png'
+import { Button } from "@nextui-org/react";
 
 const navigation = [
     {
@@ -27,16 +29,18 @@ const navigation = [
 export function Header() {
 
     return (
-        <header className="bg-[#036c5f]">
-            <div className="flex items-start justify-between w-full max-w-7xl mx-auto py-6">
-                <Image className="w-32" src={logo} alt="" width={200} height={200} />
+        <header className="bg-zinc-800 w-full ">
+            <div className="flex items-start justify-center lg:justify-between w-full max-w-7xl mx-auto py-4 ">
+                <div className="rounded-full w-36 h-36 flex items-center justify-center z-50">
+                    <Image className="w-full object-cover" src={logo} alt="" width={200} height={200} />
+                </div>
 
-                <nav>
+                <nav className="hidden lg:flex">
                     <ul className="flex items-center gap-8">
                         {navigation.map(item => {
                             return (
                                 <li key={item.value}>
-                                    <a href={item.href} className="text-zinc-200 hover:text-[#F4B324] font-medium text-sm cursor-pointer border-b pb-4 border-transparent hover:border-orange-500 transition-colors duration-150">
+                                    <a href={item.href} className="text-zinc-300 hover:text-[#F4B324] font-medium text-sm cursor-pointer pb-4 transition-colors duration-150">
                                         {item.title}
                                     </a>
                                 </li>
@@ -44,9 +48,9 @@ export function Header() {
                         })}
 
                         <li>
-                            <a href="#" className="px-6 py-3 rounded-full bg-[#F4B324] hover:bg-[#F4B324]/80 text-black font-medium text-sm transition-colors duration-150">
+                            <Button radius="none" color="warning">
                                 Contatos
-                            </a>
+                            </Button>
                         </li>
                     </ul>
                 </nav>

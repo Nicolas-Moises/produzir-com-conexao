@@ -1,48 +1,48 @@
 import Image from "next/image";
 import hero from '../../public/hero.png'
 
+import { Button } from '@nextui-org/button';
+import { ArrowRight } from "lucide-react";
+
 export function Hero() {
     return (
-        <section className="bg-gradient-to-b from-[#036c5f] from-10% to-emerald-600 w-full relative rounded-b-3xl ">
-            <div className="w-full max-w-7xl flex items-start gap-20 mx-auto pt-20 pb-24">
-                <div className="max-w-xl flex flex-col items-start gap-6 pt-10">
-                    <h1 className="text-4.5xl font-title-bold text-white">Resignificando seu trabalho com{' '}
-                        <span className="relative">
-                            autoconhecimento
-                        </span>
+        <section className="w-full relative skew-y-2 bg-zinc-800 z-10 px-4">
+            <div className="w-full max-w-7xl flex flex-col lg:flex-row items-center gap-20 mx-auto -mt-10 pt-8 pb-24 -skew-y-2">
+                <div className="max-w-2xl flex flex-col items-center lg:items-start gap-6 pt-10">
+                    <h1 className="text-4xl lg:text-6xl text-center lg:text-left font-bold tracking-tight font-title text-zinc-50">
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-yellow-500">Encontre sentido</span> no que você faz por meio de quem você é
                     </h1>
 
-                    <p className="font-medium text-white/80 text-lg">Consultoria especializada em treinamento e desenvolvimento
+                    <p className="text-white/80 max-w-xl text-lg text-center lg:text-left">
+                        Consultoria especializada em treinamento e desenvolvimento
                         humano por meio do autoconhecimento.
-
                     </p>
-                    <div className="flex items-center gap-4">
-                        <button
-                            className="px-6 py-3 rounded-full bg-[#F4B324] hover:bg-[#F4B324]/80 text-black font-medium text-sm transition-colors duration-150">
+                    <div className="flex flex-col sm:flex-row max-w-xs sm:max-w-none sm:items-center justify-center lg:justify-normal gap-4 w-full">
+                        <Button radius='none' className="bg-pink-500 text-white">
                             Agendar uma reunião
-                        </button>
-                        <button
-                            className="px-6 py-3 rounded-full border border-white bg-transparent hover:opacity-80 text-white hover: font-medium text-sm transition-colors duration-150">
-                            Sobre nós
-                        </button>
+                        </Button>
+                        <Button
+                            radius='none'
+                            className="bg-transparent group text-white "
+                            endContent={<ArrowRight className="group-hover:translate-x-1 transition-transform duration-100 w-4 h-4" />}
+                        >
+                            Visite nosso instagram
+                        </Button>
                     </div>
                 </div>
+                <div className="w-full max-w-xl group overflow-hidden rounded-2xl">
+                    <Image
+                        src={hero}
+                        alt=""
+                        quality={100}
+                        className="ml-auto z-20 w-full object-cover hover:scale-105 transition-transform duration-150"
+                        width={500}
+                        height={500}
+                    />
 
-                <Image
-                    src={hero}
-                    alt=""
-                    quality={100}
-                    className="-mb-32 ml-auto z-20 w-full max-w-xl"
-                    width={500}
-                    height={500}
-                />
+                </div>
+
             </div>
-
-            {/* <Image
-                src={pattern}
-                alt=""
-                className="absolute top-0 right-0 z-10 w-60"
-            /> */}
         </section>
     )
 }

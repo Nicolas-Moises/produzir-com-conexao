@@ -5,3 +5,9 @@
 .poligon {
     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
+
+@media (max-width: 768px) {
+    html {
+      font-size: 85%;
+    }
+}

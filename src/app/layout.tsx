@@ -1,18 +1,19 @@
 import { Header } from '@/components/header'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import { Playfair_Display } from 'next/font/google'
+import { Lexend } from 'next/font/google'
+import { Unbounded } from 'next/font/google'
 import { DM_Serif_Text } from 'next/font/google'
+import { Providers } from "./providers";
 
-const inter = Inter({
+const instrument = Lexend({
   subsets: ['latin'],
   fallback: ['ui_sans'],
   variable: '--font-inter',
   preload: true,
 })
 
-const playfairDisplay = Playfair_Display({
+const playfairDisplay = Unbounded({
   subsets: ['latin'],
   variable: '--font-playfair-display',
   preload: true,
@@ -37,10 +38,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`antialiased ${inter.variable} ${playfairDisplay.variable} ${dmSerifText.variable} font-sans`}>
-        <Header />
-        {children}
+    <html lang="pt">
+      <body className={`antialiased ${instrument.variable} ${playfairDisplay.variable} ${dmSerifText.variable} font-sans`}>
+        <Providers>
+          <Header />
+          {children}
+
+        </Providers>
       </body>
     </html>
   )
