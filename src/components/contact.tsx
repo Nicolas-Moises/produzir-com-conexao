@@ -1,3 +1,7 @@
+'use client'
+import { Button, Input } from "@nextui-org/react";
+import Link from "next/link";
+
 export function Contact() {
     return (
         <section className="bg-white w-full rounded-b-3xl relative overflow-hidden px-4">
@@ -10,6 +14,29 @@ export function Contact() {
                         Preencha o formulário abaixo, ou acesses nossas redes para acompanhar as atualizações!
                     </p>
                 </div>
+                <div className="flex justify-center gap-x-20 w-full mx-auto">
+                    <div className="w-full max-w-md grid grid-cols-2 place-items-center">
+                        <Link href='#'>
+                            Instagram
+                        </Link>
+                        <Link href='#'>
+                            WhatsApp
+                        </Link>
+                        <Link href='#'>
+                            Linkedin
+                        </Link>
+                        <Link href='#'>
+                            E-mail
+                        </Link>
+                    </div>
+                    <form className="w-full max-w-md space-y-4">
+                        <Input type="text" label="Nome" placeholder="Insira seu nome" />
+                        <Input type="text" label="WhatsApp" placeholder="Insira seu número do WhatsApp" />
+                        <Input type="email" label="E-mail" placeholder="Insira seu e-mail" />
+                        <Button className="w-full" radius="none">Enviar</Button>
+                    </form>
+                </div>
+
             </div>
         </section>
     )

@@ -1,53 +1,66 @@
 'use client'
 import Image from "next/image";
+import bubble from '../../public/bubble.png'
 import aboutus from '../../public/features-2.png'
-import { Button, Card, CardBody, CardFooter, CardHeader } from "@nextui-org/react";
+import { Button } from "@nextui-org/react";
 
 export function AboutUs() {
     return (
-        <section className="w-full relative rounded-b-3xl -mt-10 px-4">
-            <div className="w-full max-w-7xl flex flex-col-reverse lg:flex-row gap-14 lg:gap-0 items-center mx-auto pt-36 pb-24 overflow-hidden">
-                <div className="aspect-square flex items-center justify-center w-full max-w-xl group overflow-hidden rounded-2xl">
+        <section className="w-full relative bg-[#FFC900] z-10 border-t border-black">
+            <div className="w-full grid lg:grid-cols-2 center overflow-hidden">
+                <div className="w-full ml-auto hidden lg:block group overflow-hidden border-tl-3xl">
                     <Image
                         src={aboutus}
                         alt=""
                         quality={100}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-150"
-                        width={1035}
-                        height={1475}
+                        className="w-full object-cover hover:scale-105 transition-transform duration-150"
+                        width={500}
+                        height={500}
                     />
-                </div>
-                <Card className="xl:ml-auto mr-6 shadow-none z-20 border-none max-w-xl p-6">
-                    <CardHeader>
-                        <h2 className="text-5xl font-title font-bold tracking-tight text-zinc-800 text-center lg:text-left">Mas, quem somos?</h2>
-                    </CardHeader>
-                    <CardBody className="p-3">
-                        <div className="space-y-3 text-center lg:text-left">
-                            <p className="medium text-zinc-600 max-w-3xl">
-                                Oferecemos treinamentos personalizados alinhados com a estratégia da empresa, usando experiências
-                                para fortalecer as equipes.
-                            </p>
-                            <p className="medium text-zinc-600 max-w-3xl">
-                                Somos especializados em desenvolvimento humano, com foco em comportamento e habilidades interpessoais.
-                            </p>
-                            <p className="medium text-zinc-600 max-w-3xl">
-                                Acreditamos que o trabalho não é apenas nossas tarefas, mas também como nos sentimos e nos destacamos. Nossas
-                                ações moldam o sucesso e pessoas mais felizes, são mais produtivas.
-                            </p>
-                        </div>
-                    </CardBody>
 
-                    <CardFooter>
-                        <div className="flex flex-col sm:flex-row sm:items-center gap-4 justify-center lg:justify-start w-full">
-                            <Button radius='none' className="bg-pink-500 text-white">
-                                Agendar uma reunião
-                            </Button>
-                            <Button radius='none' color="warning" className="">
-                                Fale conosco
-                            </Button>
-                        </div>
-                    </CardFooter>
-                </Card>
+                </div>
+                <div className="max-w-2xl relative mx-auto py-24 px-6 lg:px-4 lg:py-0 flex flex-col items-center lg:items-start justify-center gap-6">
+                    <Image
+                        src={bubble}
+                        alt=""
+                        quality={100}
+                        className="absolute top-1/2 -translate-y-1/2 w-full"
+                        width={500}
+                        height={500}
+                    />
+                    <h2 className="text-5xl z-20 font-title font-bold tracking-tight text-black text-center lg:text-left">Mas, quem somos?</h2>
+
+                    <div className="space-y-3 text-center lg:text-left z-20">
+                        <p className="medium text-zinc-800 max-w-3xl">
+                            Oferecemos treinamentos personalizados alinhados com a estratégia da empresa, usando experiências
+                            para fortalecer as equipes.
+                        </p>
+                        <p className="medium text-zinc-800 max-w-3xl">
+                            Somos especializados em desenvolvimento humano, com foco em comportamento e habilidades interpessoais.
+                        </p>
+                        <p className="medium text-zinc-800 max-w-3xl">
+                            Acreditamos que o trabalho não é apenas nossas tarefas, mas também como nos sentimos e nos destacamos. Nossas
+                            ações moldam o sucesso e pessoas mais felizes, são mais produtivas.
+                        </p>
+                    </div>
+
+                    <Button radius='none' className="bg-black text-white z-20">
+                        Agendar uma reunião
+                    </Button>
+                </div>
+                <div className="w-full ml-auto lg:hidden group overflow-hidden border-tl-3xl">
+                    <Image
+                        src={aboutus}
+                        alt=""
+                        quality={100}
+                        className="w-full object-cover hover:scale-105 transition-transform duration-150"
+                        width={500}
+                        height={500}
+                    />
+
+                </div>
+
+
             </div>
         </section>
     )

@@ -6,10 +6,10 @@ import { ArrowRight } from "lucide-react";
 
 export function Hero() {
     return (
-        <section className="w-full relative skew-y-2 bg-zinc-800 z-10 px-4">
-            <div className="w-full max-w-7xl flex flex-col lg:flex-row items-center gap-20 mx-auto -mt-10 pt-8 pb-24 -skew-y-2">
-                <div className="max-w-2xl flex flex-col items-center lg:items-start gap-6 pt-10">
-                    <h1 className="text-4xl lg:text-6xl text-center lg:text-left font-bold tracking-tight font-title text-zinc-50">
+        <section className="w-full relative bg-zinc-800 z-10">
+            <div className="w-full grid lg:grid-cols-2 center overflow-hidden">
+                <div className="max-w-2xl py-24 lg:py-0 px-6 mx-auto lg:px-4 flex flex-col items-center lg:items-start justify-center gap-6">
+                    <h1 className=" text-6xl text-center lg:text-left font-bold tracking-tight font-title text-zinc-50">
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-yellow-500">Encontre sentido</span> no que você faz por meio de quem você é
                     </h1>
 
@@ -30,12 +30,12 @@ export function Hero() {
                         </Button>
                     </div>
                 </div>
-                <div className="w-full max-w-xl group overflow-hidden rounded-2xl">
+                <div className="w-full ml-auto group overflow-hidden border-tl-3xl">
                     <Image
                         src={hero}
                         alt=""
                         quality={100}
-                        className="ml-auto z-20 w-full object-cover hover:scale-105 transition-transform duration-150"
+                        className="w-full object-cover hover:scale-105 transition-transform duration-150"
                         width={500}
                         height={500}
                     />

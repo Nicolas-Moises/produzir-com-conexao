@@ -29,8 +29,8 @@ const navigation = [
 export function Header() {
 
     return (
-        <header className="bg-zinc-800 w-full ">
-            <div className="flex items-start justify-center lg:justify-between w-full max-w-7xl mx-auto py-4 ">
+        <header className="bg-zinc-800 w-full px-4 border-b border-zinc-600">
+            <div className="flex items-center justify-center lg:justify-between w-full max-w-7xl mx-auto">
                 <div className="rounded-full w-36 h-36 flex items-center justify-center z-50">
                     <Image className="w-full object-cover" src={logo} alt="" width={200} height={200} />
                 </div>

@@ -44,22 +44,28 @@ const solutions = [
 ]
 export function Features() {
     return (
-        <section className="bg-gradient-to-br from-orange-500 via-yellow-500 to-orange-400 w-full rounded-b-3xl -mt-10 relative overflow-hidden">
-            <div className="flex overflow-hidden max-w-[calc(100vw-((100vw-1280px)/2))] xl:ml-auto pb-16 xl:pb-0">
-                <div className="w-full flex flex-col xl:items-start items-center gap-14 pt-20 px-4">
-                    <div className="flex flex-col gap-6 items-center xl:items-start">
-                        <h2 className="text-[3rem] font-title font-bold tracking-tight text-white text-center">Mentoria personificada</h2>
-                        <p className="text-white text-lg max-w-3xl text-center xl:text-left">
+        <section className=" w-full relative overflow-hidden py-24 bg-[#FF90E8]">
+            <div className="flex overflow-hidden max-w-7xl mx-auto ">
+                <div className="w-full flex flex-col items-center gap-14 px-4">
+                    <div className="flex flex-col gap-6 items-center">
+                        <h2 className="text-5xl font-title font-bold tracking-tight text-black text-center">Mentoria personificada</h2>
+                        <p className="text-zinc-800 text-lg max-w-3xl text-center ">
                             Com atuação no setor de joalheria, saúde, bem estar e educacional, oferecemos programas personalizados para desenvolver talentos e alcançar
                             resultados, de acordo com as necessidades dos clientes.
                         </p>
                     </div>
 
-                    <Accordion variant="splitted" className="max-w-3xl ">
+                    <Accordion variant="splitted" className="w-full max-w-5xl">
 
                         {solutions.map((item, i) => {
                             return (
-                                <AccordionItem key={item.id} aria-label={item.title} title={item.title} startContent={<item.icon className="text-yellow-500" />}>
+                                <AccordionItem 
+                                className="border border-black"
+                                    key={item.id} 
+                                    aria-label={item.title} 
+                                    title={item.title} 
+                                    startContent={<item.icon className="text-yellow-500" />}
+                                >
                                     <p className="text-zinc-600">
                                         {item.content}
                                     </p>
@@ -69,14 +75,7 @@ export function Features() {
                     </Accordion>
                 </div>
 
-                <div className="poligon  h-full min-h-[750px] group hidden xl:flex">
-                    <Image
-                        src={features}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-150"
-                        alt=""
-                    />
-
-                </div>
+    
             </div>
         </section>
     )

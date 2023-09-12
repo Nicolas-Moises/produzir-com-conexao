@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss'
 
-import {nextui} from "@nextui-org/react"
+import { nextui } from "@nextui-org/react"
 
 const config: Config = {
   content: [
@@ -25,6 +25,15 @@ const config: Config = {
         '4.5xl': [
           '3.5rem', '1'
         ]
+      },
+      keyframes: {
+        scaleIn: {
+          from: { opacity: '0', transform: 'rotateX(-10deg) scale(0.9)' },
+          to: { opacity: '1', transform: 'rotateX(0deg) scale(1)' },
+        },
+      },
+      animation: {
+        scaleIn: 'scaleIn 300ms ease',
       },
       colors: {
         zinc: {
