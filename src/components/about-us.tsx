@@ -1,12 +1,11 @@
 'use client'
 import Image from "next/image";
-import bubble from '../../public/bubble.png'
 import aboutus from '../../public/features-2.png'
 import { Button } from "@nextui-org/react";
 
 export function AboutUs() {
     return (
-        <section className="w-full relative bg-[#FFC900] z-10 border-t border-black">
+        <section className="w-full relative bg-yellow-300 z-10 border-t border-black">
             <div className="w-full grid lg:grid-cols-2 center overflow-hidden">
                 <div className="w-full ml-auto hidden lg:block group overflow-hidden border-tl-3xl">
                     <Image
@@ -20,14 +19,6 @@ export function AboutUs() {
 
                 </div>
                 <div className="max-w-2xl relative mx-auto py-24 px-6 lg:px-4 lg:py-0 flex flex-col items-center lg:items-start justify-center gap-6">
-                    <Image
-                        src={bubble}
-                        alt=""
-                        quality={100}
-                        className="absolute top-1/2 -translate-y-1/2 w-full"
-                        width={500}
-                        height={500}
-                    />
                     <h2 className="text-5xl z-20 font-title font-bold tracking-tight text-black text-center lg:text-left">Mas, quem somos?</h2>
 
                     <div className="space-y-3 text-center lg:text-left z-20">
@@ -44,7 +35,7 @@ export function AboutUs() {
                         </p>
                     </div>
 
-                    <Button radius='none' className="bg-black text-white z-20">
+                    <Button radius='none' className="bg-pink-500 text-white">
                         Agendar uma reunião
                     </Button>
                 </div>
