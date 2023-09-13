@@ -3,7 +3,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Lexend } from 'next/font/google'
 import { Instrument_Sans } from 'next/font/google'
-import { Providers } from "./providers";
+import { Providers } from "./providers"
+import 'keen-slider/keen-slider.min.css'
 
 const instrument = Lexend({
   subsets: ['latin'],
