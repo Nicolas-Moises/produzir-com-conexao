@@ -93,13 +93,13 @@ export function Training() {
                             <Tabs.Content
                                 key={excluse.id}
                                 value={`${excluse.id}`}
-                                className="flex-1 overflow-hidden z-20 h-[400px] rounded-2xl data-[state=active]:animate-scaleIn"
+                                className="flex-1 overflow-hidden z-20 h-[400px]  data-[state=active]:animate-scaleIn"
                             >
                                 <Image
                                     src={excluse.item}
                                     priority
                                     alt=""
-                                    className="mx-auto mt-16 lg:mt-0 lg:mr-auto w-[80%]  h-full rounded-2xl object-cover"
+                                    className="mx-auto mt-16 lg:mt-0 lg:mr-auto w-[80%]  h-full object-cover"
                                 />
                             </Tabs.Content>
                         )

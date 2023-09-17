@@ -19,7 +19,7 @@ const config: Config = {
       fontFamily: {
         sans: 'var(--font-inter)',
         'title-bold': 'var(--font-dm-serif-text)',
-        title: 'var(--font-playfair-display)',
+        title: 'var(--font-recoleta)',
       },
       fontSize: {
         '4.5xl': [

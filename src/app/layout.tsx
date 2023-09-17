@@ -6,6 +6,9 @@ import { Instrument_Sans } from 'next/font/google'
 import { Providers } from "./providers"
 import 'keen-slider/keen-slider.min.css'
 
+import Mooli from 'next/font/local'
+import { Footer } from '@/components/footer'
+
 const instrument = Lexend({
   subsets: ['latin'],
   fallback: ['ui_sans'],
@@ -16,6 +19,13 @@ const instrument = Lexend({
 const playfairDisplay = Instrument_Sans({
   subsets: ['latin'],
   variable: '--font-playfair-display',
+  preload: true,
+})
+ 
+// Font files can be colocated inside of `app`
+const mooli = Mooli({
+  src: '../assets/fonts/mooli-regular.ttf',
+  variable: '--font-recoleta',
   preload: true,
 })
 
@@ -32,11 +42,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt">
-      <body className={`antialiased ${instrument.variable} ${playfairDisplay.variable}  font-sans`}>
+      <body className={`antialiased ${instrument.variable} ${mooli.variable}  font-sans`}>
         <Providers>
           <Header />
           {children}
-
+          <Footer />
         </Providers>
       </body>
     </html>

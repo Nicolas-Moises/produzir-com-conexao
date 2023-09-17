@@ -10,7 +10,7 @@ export function Hero() {
             <div className="w-full grid lg:grid-cols-2 center overflow-hidden">
                 <div className="max-w-2xl py-24 lg:py-0 px-6 mx-auto lg:px-4 flex flex-col items-center lg:items-start justify-center gap-6">
                     <h1 className=" text-6xl text-center lg:text-left font-bold tracking-tight font-title text-zinc-50">
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-500 to-yellow-500">Encontre sentido</span> no que você faz por meio de quem você é
+                        Encontre sentido no que você faz por meio de quem você é
                     </h1>
 
                     <p className="text-white/80 max-w-xl text-lg text-center lg:text-left">
