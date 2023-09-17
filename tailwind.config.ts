@@ -10,21 +10,14 @@ const config: Config = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
+
+    container: {
+      center: true,
+    },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
       fontFamily: {
-        sans: 'var(--font-inter)',
-        'title-bold': 'var(--font-dm-serif-text)',
+        sans: 'var(--font-lexend)',
         title: 'var(--font-recoleta)',
-      },
-      fontSize: {
-        '4.5xl': [
-          '3.5rem', '1'
-        ]
       },
       keyframes: {
         scaleIn: {
@@ -36,6 +29,10 @@ const config: Config = {
         scaleIn: 'scaleIn 300ms ease',
       },
       colors: {
+        primary: '#ffd470',
+        secondary: '#FF90E8',
+        tertiary: '',
+        'background-light': '#f7f5f2',
         zinc: {
           50: '#faf7f4'
         }

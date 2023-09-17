@@ -11,3 +11,7 @@
       font-size: 85%;
     }
 }
+
+.header-bg {
+  @apply bg-zinc-900;
+}

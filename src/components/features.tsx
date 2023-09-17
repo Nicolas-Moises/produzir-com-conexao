@@ -1,8 +1,8 @@
 'use client'
-import Image from "next/image";
-import { GraduationCap, Sparkles, TrendingUp, Users, Wand2, Zap } from 'lucide-react'
+import Image from "next/image"
+import { GraduationCap, Sparkles, Users, Wand2, Zap } from 'lucide-react'
 import { Accordion, AccordionItem } from "@nextui-org/react"
-import features from '../../public/feature.png'
+import pattern from '../../public/pattern.svg'
 
 const solutions = [
     {
@@ -51,19 +51,27 @@ const solutions = [
 ]
 export function Features() {
     return (
-        <section className=" w-full relative overflow-hidden py-24 bg-[#FF90E8] border-b border-black">
-            <div className="flex overflow-hidden max-w-7xl mx-auto ">
-                <div className="w-full flex flex-col items-center gap-14 px-4">
-                    <div className="flex flex-col gap-6 items-center">
-                        <h2 className="text-5xl font-title font-bold tracking-tight text-black text-center">Mentoria personificada</h2>
-                        <p className="text-zinc-800 text-lg max-w-3xl text-center ">
-                            Com atuação no setor de joalheria, saúde, bem estar e educacional, oferecemos programas personalizados para desenvolver talentos e alcançar
-                            resultados, de acordo com as necessidades dos clientes.
-                        </p>
-                    </div>
-
-                    <Accordion variant="splitted" className="w-full max-w-5xl">
-
+        <section className=" w-full relative overflow-hidden py-24 bg-background-light">
+            <div className="container flex flex-col items-center px-4">
+                <div className="flex flex-col items-center">
+                    <span className="text-sm font-semibold text-zinc-600 py-1 px-2 rounded-full border border-zinc-300 bg-zinc-500/10 mb-4">
+                        Encontre significado no seu trabalho através do autoconhecimento
+                    </span>
+                    <h2 className="text-5xl font-title font-bold tracking-tight text-black text-center">
+                        Mentoria personificada
+                    </h2>
+                    <p className="text-zinc-800 text-lg max-w-4xl text-center mt-6">
+                        Com atuação no setor de joalheria, saúde, bem estar e educacional, oferecemos programas personalizados para desenvolver talentos e alcançar
+                        resultados, de acordo com as necessidades dos clientes.
+                    </p>
+                </div>
+                <div className="relative w-full rounded-3xl bg-orange-300 flex justify-center py-24 mt-10">
+                    <Image
+                        src={pattern}
+                        alt=""
+                        className="absolute top-6 left-40"
+                    />
+                    <Accordion variant="splitted" className="w-full max-w-5xl" defaultExpandedKeys={["1"]}>
                         {solutions.map((item, i) => {
                             return (
                                 <AccordionItem
@@ -85,7 +93,6 @@ export function Features() {
                         })}
                     </Accordion>
                 </div>
-
 
             </div>
         </section>

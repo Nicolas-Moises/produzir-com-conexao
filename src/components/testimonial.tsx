@@ -7,9 +7,9 @@ interface TestimonialCardProps {
 
 export function Testimonial(props: TestimonialCardProps) {
     return (
-        <div className="keen-slider__slide flex flex-col justify-between rounded-3xl bg-white px-8 pb-8 pt-14 border-small border-black ">
-            <div className="flex items-start">
-                <Quote size={32} className="fill-pink-400 text-pink-400" />
+        <div className="keen-slider__slide flex flex-col justify-between rounded-3xl px-8 pb-8 pt-14">
+            <div className="flex flex-col items-center">
+                <Quote size={40} className="fill-orange-400 text-orange-400" />
                 <p className="mt-4 flex flex-1 items-start text-center text-2xl font-medium text-zinc-600">
                     {props.message}
                 </p>

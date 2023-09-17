@@ -2,33 +2,25 @@ import { Header } from '@/components/header'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Lexend } from 'next/font/google'
-import { Instrument_Sans } from 'next/font/google'
 import { Providers } from "./providers"
 import 'keen-slider/keen-slider.min.css'
 
 import Mooli from 'next/font/local'
 import { Footer } from '@/components/footer'
 
-const instrument = Lexend({
+const lexend = Lexend({
   subsets: ['latin'],
   fallback: ['ui_sans'],
-  variable: '--font-inter',
+  variable: '--font-lexend',
   preload: true,
 })
 
-const playfairDisplay = Instrument_Sans({
-  subsets: ['latin'],
-  variable: '--font-playfair-display',
-  preload: true,
-})
- 
 // Font files can be colocated inside of `app`
 const mooli = Mooli({
   src: '../assets/fonts/mooli-regular.ttf',
   variable: '--font-recoleta',
   preload: true,
 })
-
 
 export const metadata: Metadata = {
   title: 'Produzir com Conexão',
@@ -42,7 +34,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt">
-      <body className={`antialiased ${instrument.variable} ${mooli.variable}  font-sans`}>
+      <body className={`antialiased ${lexend.variable} ${mooli.variable} font-sans scroll-smooth`}>
         <Providers>
           <Header />
           {children}

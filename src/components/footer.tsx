@@ -1,15 +1,35 @@
 import Image from "next/image";
 
 import logo from '../../public/logo-produzir.png'
+import { Instagram, Linkedin, Mail } from "lucide-react";
+import Link from "next/link";
+
+const links = [
+    {
+        id: 1,
+        icon: Instagram,
+        href: '',
+    },
+    {
+        id: 2,
+        icon: Linkedin,
+        href: '',
+    },
+    {
+        id: 3,
+        icon: Mail,
+        href: '',
+    },
+]
 
 export function Footer() {
     return (
-        <footer className="w-full bg-zinc-800 border-t border-black" aria-labelledby="footer-heading">
-            <h2 id="footer-heading" className="sr-only">Footer</h2>
-            <div className="px-4 pb-4 pt-8 mx-auto max-w-7xl sm:px-6 lg:px-16">
-                <div className="flex flex-col items-baseline">
-                    <div className="mx-auto w-36 h-36">
-                        <a href="/" className="mx-auto w-44 h-44">
+        <footer className="w-full bg-zinc-900 border-t border-black pt-6 px-4" aria-labelledby="footer-heading">
+            <h2 id="footer-heading max-w-7xl" className="sr-only">Footer</h2>
+            <div className="container flex flex-col">
+                <div className="flex items-start justify-between w-full">
+                    <div className="w-32 h-32">
+                        <a href="/" className="mx-auto">
                             <Image
                                 alt=""
                                 src={logo}
@@ -17,12 +37,22 @@ export function Footer() {
                             />
                         </a>
                     </div>
-                    <div className="mx-auto -mt-4">
-                        <span className="mx-auto text-sm text-zinc-500">
+
+                    <div className="flex flex-col gap-10 items-end">
+                        <div className="flex items-center gap-4">
+                            {links.map(link => {
+                                return (
+                                    <Link href={link.href} key={link.id}>
+                                        <link.icon className="text-zinc-300 w-6 h-6 hover:text-primary" />
+                                    </Link>
+                                )
+                            })}
+                        </div>
+                        <span className="self-end text-right mx-auto text-xs text-zinc-500">
                             Produzir Com Conexão © 2023. Todos os direitos reservados.
-                            <a href="https://www.instagram.com/produzircomconexao/" className="mx-2 text-yellow-600 hover:text-zinc-100">@Produzircomconexao</a>
                         </span>
                     </div>
+
                 </div>
             </div>
         </footer>
