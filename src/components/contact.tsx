@@ -5,7 +5,7 @@ import Image from "next/image"
 
 export function Contact() {
     return (
-        <section className="w-full rounded-b-3xl relative overflow-hidden px-4 bg-background-light pt-16 pb-24">
+        <section className="w-full rounded-b-3xl relative overflow-hidden px-4 bg-background-light pt-16 pb-24" id="contact">
             <div className="container flex flex-col items-center">
                 <div className="flex flex-col gap-4 items-center">
                     <Image

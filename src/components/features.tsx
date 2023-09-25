@@ -51,7 +51,7 @@ const solutions = [
 ]
 export function Features() {
     return (
-        <section className=" w-full relative overflow-hidden py-24 bg-background-light">
+        <section className=" w-full relative overflow-hidden py-24 bg-background-light" id="cases">
             <div className="container flex flex-col items-center px-4">
                 <div className="flex flex-col items-center">
                     <span className="text-sm font-semibold text-zinc-600 py-1 px-2 rounded-full border border-zinc-300 bg-zinc-500/10 mb-4">

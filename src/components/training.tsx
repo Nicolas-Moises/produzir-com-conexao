@@ -15,23 +15,24 @@ const excluses = [
     {
         id: '1',
         title: 'Aprendizagem experiencial',
-        content:
+        content: [
             'Aprender através de experiências práticas e interativas; Aprender fazendo, não apenas ouvindo lendo ou assistindo',
+            'Agilidade no processo de conhecimento e aplicabilidade',
+            'Metodologia testada para o desenvolvimento de novas habilidades',
+            'Aprendizado por experiencia para expansão e engajamento',
+            'Personalização da Metodologia para melhor assimilação do aprendizado',
+            'Processo de aprendizagem com promoção de expansão dos times',
+            'Atividade experiencial para expansão do aprendizado'
+        ],
         item: caseOne,
     },
     {
         id: '2',
         title: 'Prático e Interativo',
-        content:
+        content: [
             'Transformamos principios complexos em ferramentas praticas; Participantes podem aplicar essas ferramentas imediatamente no trabalho',
+        ],
         item: caseTwo,
-    },
-    {
-        id: '3',
-        title: 'Conciliação automática',
-        content:
-            'Processo disciplinado e integrativo; Garantia de resultados percebidos; Resultados são uma consequência natural dos conceitos do treinamento.',
-        item: caseThree,
     },
 ]
 
@@ -39,7 +40,7 @@ export function Training() {
     const [activeTab, setActiveTab] = useState(excluses[0].id)
 
     return (
-        <section className="relative flex w-full flex-col items-centeroverflow-hidden pt-16 pb-24 px-4">
+        <section className="scroll-mt-20 relative flex w-full flex-col items-centeroverflow-hidden pt-16 pb-24 px-4" id="training">
             <div className='container'>
                 <div className="flex flex-col items-center max-w-5xl mx-auto">
                     <Image
@@ -86,11 +87,16 @@ export function Training() {
                                         <strong className="font-title text-xl text-zinc-800 group-data-[state=active]:text-pink-600">
                                             {excluse.title}
                                         </strong>
-                                        <span
-                                            className=" text-left text-sm text-zinc-800"
-                                        >
-                                            {excluse.content}
-                                        </span>
+                                        {excluse.content.map((text, i) => {
+                                            return (
+                                                <span
+                                                    key={i}
+                                                    className=" text-left text-sm text-zinc-800"
+                                                >
+                                                    {text}
+                                                </span>
+                                            )
+                                        })}
                                     </div>
                                 </Tabs.Trigger>
                             )

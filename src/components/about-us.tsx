@@ -7,7 +7,7 @@ import { Button } from "@nextui-org/react";
 
 export function AboutUs() {
     return (
-        <section className="w-full relative z-10 py-24 bg-background-light px-4">
+        <section className="w-full relative z-10 py-24 bg-background-light px-4" id="about-us">
             <div className="container flex flex-col-reverse lg:flex-row items-center gap-10 overflow-hidden bg-primary p-6 rounded-3xl">
 
                 <div className="h-[600px] grid grid-cols-12 gap-3">

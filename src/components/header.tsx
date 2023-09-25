@@ -4,6 +4,7 @@ import logo from '../../public/logo-produzir.png'
 import { Button } from "@nextui-org/react";
 import Link from "next/link";
 import { useState } from "react";
+import { Link as A } from 'react-scroll/modules'
 
 const navigation = [
     {
@@ -17,13 +18,13 @@ const navigation = [
         href: '#',
     },
     {
-        title: 'Cases',
-        value: 'cases',
+        title: 'Mentoria personificada',
+        value: 'training',
         href: '#',
     },
     {
-        title: 'Mentoria personificada',
-        value: 'training',
+        title: 'Cases',
+        value: 'cases',
         href: '#',
     },
 ]
@@ -49,19 +50,24 @@ export function Header() {
                         {navigation.map(item => {
                             return (
                                 <li key={item.value}>
-                                    <a
-                                        href={item.href}
+                                    <A
+                                        activeClass="active"
                                         className={`hover:text-primary font-medium text-sm cursor-pointer pb-4 transition-colors duration-150
-                                        ${color ? 'text-zinc-100' : 'text-zinc-300'}`}
+                                        ${color ? 'text-zinc-100' : 'text-zinc-300'} active:text-primary`}
+                                        to={item.value}
+                                        spy={true}
+                                        smooth={true}
+                                        offset={200}
+                                        duration={300}
                                     >
                                         {item.title}
-                                    </a>
+                                    </A>
                                 </li>
                             )
                         })}
 
                         <li>
-                            <Button radius="sm" color="warning">
+                            <Button radius="sm" color="primary" href="#contact" as={Link}>
                                 Contatos
                             </Button>
                         </li>

@@ -7,7 +7,7 @@ import { ArrowRight } from 'lucide-react'
 
 export function Hero() {
     return (
-        <section className="w-full relative bg-zinc-900 z-10 mt-24">
+        <section className="w-full relative bg-zinc-900 z-10 mt-24" id="home">
             <div className="container flex flex-col lg:flex-row items-center gap-8  mx-auto overflow-hidden py-24 px-4">
                 <div className="max-w-2xl lg:py-0 px-6 mx-auto lg:px-4 flex flex-col items-center lg:items-start justify-center">
                     <span className="text-xs xs:text-sm font-semibold text-zinc-400 mt-10 py-1 px-2 rounded-full border border-zinc-700 bg-orange-500/10 mb-4">

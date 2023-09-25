@@ -42,10 +42,10 @@ const testimonials = [
         content: 'Parabéns por todo o desempenho e paixão em dar o seu melhor! Que você venha colher os bons frutos, você merece muito.'
     },
     {
-        author: 'Cristiane',
+        author: 'Guilherme',
         id: 7,
-        role: 'Gerente de vendas em Pandora',
-        content: 'Parabéns por todo o desempenho e paixão em dar o seu melhor! Que você venha colher os bons frutos, você merece muito.'
+        role: 'Coordenador de contabilidade e fiscal',
+        content: 'Muito obrigado pelo empenho e pela entrega. Foi muito bom... Parabéns. Os pontos que você trouxe e apresentou foram assertivos com o momento que estamos passando'
     },
 ]
 export function Testimonials() {
