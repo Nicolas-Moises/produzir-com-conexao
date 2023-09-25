@@ -33,7 +33,7 @@ export function Header() {
     const [color, setColor] = useState(false)
 
     return (
-        <header className={`w-full px-4 fixed top-0 left-0 right-0 z-50 ${color ? 'backdrop-blur-xl bg-zinc-900/70' : 'bg-zinc-900'} transition-colors duration-150`}>
+        <header className={`w-full px-4 z-50 ${color ? 'backdrop-blur-xl bg-zinc-900/70' : 'bg-zinc-900'} transition-colors duration-150`}>
             <div className="flex items-center justify-center lg:justify-between w-full max-w-7xl mx-auto">
                 <Link href='/' className="w-28 h-28 flex items-center justify-center">
                     <Image className="w-full object-cover" src={logo} alt="" width={100} height={100} />
