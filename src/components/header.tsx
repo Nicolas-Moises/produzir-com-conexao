@@ -31,14 +31,7 @@ const navigation = [
 
 export function Header() {
     const [color, setColor] = useState(false)
-    function changeColor() {
-        if (window.scrollY >= 800) {
-            setColor(true)
-        } else setColor(false)
-    }
-    if (window !== undefined) {
-        window.addEventListener('scroll', changeColor)
-    }
+
     return (
         <header className={`w-full px-4 fixed top-0 left-0 right-0 z-50 ${color ? 'backdrop-blur-xl bg-zinc-900/70' : 'bg-zinc-900'} transition-colors duration-150`}>
             <div className="flex items-center justify-center lg:justify-between w-full max-w-7xl mx-auto">
