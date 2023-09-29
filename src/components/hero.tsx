@@ -1,70 +1,42 @@
 import Image from "next/image";
-import hero from '../../public/hero.png'
-import preview from '../../public/photo-1.png'
-import caseOne from '../../public/training.png'
+import stars from '../../public/shining-stars.svg'
+import hero from '../../public/features-2.png'
 import { Button } from '@nextui-org/button'
-import { ArrowRight } from 'lucide-react'
 
 export function Hero() {
     return (
-        <section className="w-full relative bg-zinc-900 z-10" id="home">
-            <div className="container flex flex-col lg:flex-row items-center gap-8  mx-auto overflow-hidden py-24 px-4">
-                <div className="max-w-2xl lg:py-0 px-6 mx-auto lg:px-4 flex flex-col items-center lg:items-start justify-center">
-                    <span className="text-xs xs:text-sm font-semibold text-zinc-400 mt-10 py-1 px-2 rounded-full border border-zinc-700 bg-orange-500/10 mb-4">
-                        +10 times impactados positivamente
+        <section className="w-full relative z-10 bg-zinc-800" id="home">
+            <div className="container flex flex-col xl:flex-row items-center gap-8 justify-between mx-auto overflow-hidden py-24 px-4">
+                <div className="relative max-w-2xl xl:py-0 px-6 xl:px-4 flex flex-col items-center xl:items-start justify-center ">
+                    <Image className="absolute rotate-6 top-0 right-0 -z-10 w-20" alt="" src={stars} />
+                    <span className="text-xs sm:text-sm font-medium text-pink-400 mt-10 mb-4">
+                        Explore seu potencial
                     </span>
-                    <h1 className="text-5xl text-center lg:text-left font-bold tracking-tight font-title text-zinc-50">
+                    <h1 className="text-6xl mb-4 lg:text-7xl text-center xl:text-left font-bold tracking-tight font-title text-zinc-50">
                         Encontre sentido no que você faz por meio de quem você é
                     </h1>
-                    <div className="w-full max-w-lg h-px bg-zinc-800 my-4" />
-                    <p className="mb-6 text-white/80 max-w-xl font-normal text-lg text-center lg:text-left">
+                    {/* <div className="w-full max-w-lg h-px bg-zinc-800 my-4" /> */}
+                    <p className="mb-6 text-zinc-300 max-w-xl font-normal text-lg text-center xl:text-left">
                         Somos uma consultoria especializada em treinamento e desenvolvimento
                         humano por meio do autoconhecimento.
                     </p>
-                    <div className="flex flex-col sm:flex-row max-w-xs sm:max-w-none sm:items-center justify-center lg:justify-normal gap-4 w-full">
-                        <Button radius='sm' className="bg-pink-500 hover:opacity-80 text-white">
+                    <div className="flex flex-col sm:flex-row max-w-xs sm:max-w-none sm:items-center justify-center xl:justify-normal gap-4 w-full">
+                        <Button radius='sm' className="bg-pink-400 hover:opacity-80 text-white" size="lg" target="_blank" href="https://wa.me/5511983360953">
                             Agendar uma reunião
-                        </Button>
-                        <Button
-                            radius='sm'
-                            className="bg-transparent group text-white "
-                            endContent={<ArrowRight className="group-hover:translate-x-1 transition-transform duration-100 w-4 h-4" />}
-                        >
-                            Visite nosso instagram
                         </Button>
                     </div>
                 </div>
-                <div className="h-[600px] grid grid-cols-12 gap-3">
-                    <div className="lg:col-span-7 col-span-12 row-span-2 overflow-hidden rounded-xl">
-                        <Image
-                            src={hero}
-                            alt=""
-                            quality={100}
-                            className="w-full h-full object-cover hover:scale-105 transition-transform duration-150"
-                            width={500}
-                            height={500}
-                        />
-                    </div>
-                    <div className="row-start-3 lg:col-span-7 col-span-12 overflow-hidden rounded-xl">
-                        <Image
-                            src={caseOne}
-                            alt=""
-                            quality={100}
-                            className="w-full h-full object-cover object-right hover:scale-[1.02] transition-transform duration-150"
-                            width={500}
-                            height={500}
-                        />
-                    </div>
-                    <div className="col-span-5 col-start-8 row-span-3 overflow-hidden rounded-xl hidden lg:inline-flex">
-                        <Image
-                            src={preview}
-                            alt=""
-                            quality={100}
-                            className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-150"
-                            width={500}
-                            height={500}
-                        />
-                    </div>
+
+                <div className="rounded-2xl overflow-hidden max-w-xl aspect-square mt-8 xl:mt-0">
+                    <Image
+                        src={hero}
+                        alt=""
+                        quality={100}
+                        priority
+                        className="w-full h-full rounded-2xl object-cover object-bottom transition-transform duration-150"
+                        width={500}
+                        height={500}
+                    />
                 </div>
             </div>
         </section>

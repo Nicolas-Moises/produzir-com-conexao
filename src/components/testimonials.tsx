@@ -60,11 +60,11 @@ export function Testimonials() {
     return (
         <section className="bg-white w-full rounded-b-3xl relative overflow-hidden px-4">
             <div className="container flex flex-col items-center pt-20 pb-24">
-                <p className="text-zinc-800 uppercase text-sm font-medium max-w-3xl text-center">
+                <p className="text-zinc-700 uppercase font-medium max-w-3xl text-center">
                     Depoimentos quentinhos de quem passou por nossos programas de desenvolvimento.
                 </p>
                 <div className="mx-auto max-w-6xl grid grid-cols-[36px_1fr_36px] gap-6">
-                    <div className="flex justify-start items-center bg-white z-20">
+                    <div className="justify-start items-center bg-white z-20 hidden md:flex">
                         <button
                             className="p-3 rounded-full border border-zinc-300 group hover:border-yellow-500"
                             type="button"
@@ -80,7 +80,7 @@ export function Testimonials() {
                         </button>
                     </div>
                     <div
-                        className="keen-slider mt-10 cursor-grab active:cursor-grabbing max-w-4xl mx-auto"
+                        className="keen-slider col-span-3 col-start-1 md:col-start-2 md:col-span-1 mt-10 cursor-grab active:cursor-grabbing max-w-4xl mx-auto"
                         ref={sliderRef}
                     >
                         {testimonials.map((message) => {
@@ -94,7 +94,7 @@ export function Testimonials() {
                             )
                         })}
                     </div>
-                    <div className="flex justify-end items-center">
+                    <div className="justify-end items-center hidden md:flex">
                         <button
                             className="p-3 rounded-full border border-zinc-300 group hover:border-yellow-500 bg-white z-20"
                             type="button"

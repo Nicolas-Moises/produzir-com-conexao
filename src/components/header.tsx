@@ -33,8 +33,8 @@ export function Header() {
     const [color, setColor] = useState(false)
 
     return (
-        <header className={`w-full px-4 z-50 ${color ? 'backdrop-blur-xl bg-zinc-900/70' : 'bg-zinc-900'} transition-colors duration-150`}>
-            <div className="flex items-center justify-center lg:justify-between w-full max-w-7xl mx-auto">
+        <header className={`w-full px-4 z-50 bg-zinc-800 transition-colors duration-150`}>
+            <div className="flex items-center justify-center lg:justify-between container">
                 <Link href='/' className="w-28 h-28 flex items-center justify-center">
                     <Image className="w-full object-cover" src={logo} alt="" width={100} height={100} />
                 </Link>
@@ -47,7 +47,7 @@ export function Header() {
                                     <A
                                         activeClass="active"
                                         className={`hover:text-primary font-medium text-sm cursor-pointer pb-4 transition-colors duration-150
-                                        ${color ? 'text-zinc-100' : 'text-zinc-300'} active:text-primary`}
+                                        ${color ? 'text-zinc-400' : 'text-zinc-400'} active:text-primary`}
                                         to={item.value}
                                         spy={true}
                                         smooth={true}
@@ -61,9 +61,19 @@ export function Header() {
                         })}
 
                         <li>
-                            <Button radius="sm" color="primary" href="#contact" as={Link}>
-                                Contatos
-                            </Button>
+                            <A
+                                activeClass="active"
+                                className='px-3.5 py-2 text-sm bg-gradient-to-bl from-pink-300 via-pink-600 to-pink-400 text-white 
+                                hover:from-pink-400 hover:via-pink-500 hover:to-pink-400 ease flex items-center justify-center gap-2 font-medium
+                                transition-all duration-150 cursor-pointer rounded-full'
+                                to='contact'
+                                spy={true}
+                                smooth={true}
+                                offset={200}
+                                duration={300}
+                            >
+                                Contato
+                            </A>
                         </li>
                     </ul>
                 </nav>

@@ -1,12 +1,15 @@
 import { Header } from '@/components/header'
 import './globals.css'
 import type { Metadata } from 'next'
-import { Lexend } from 'next/font/google'
+import { Lexend, Familjen_Grotesk } from 'next/font/google'
 import { Providers } from "./providers"
 import 'keen-slider/keen-slider.min.css'
 
+import shape from '../../public/bg-header.svg'
+
 import Mooli from 'next/font/local'
 import { Footer } from '@/components/footer'
+import Image from 'next/image'
 
 const lexend = Lexend({
   subsets: ['latin'],
@@ -15,6 +18,13 @@ const lexend = Lexend({
   preload: true,
 })
 
+const familjenGrotesk = Familjen_Grotesk({
+  subsets: ['latin'],
+  display: 'fallback',
+  variable: '--font-familjen-grotesk',
+  fallback: ['system-ui', 'mono'],
+  weight: '700',
+})
 // Font files can be colocated inside of `app`
 const mooli = Mooli({
   src: '../assets/fonts/mooli-regular.ttf',
@@ -34,11 +44,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt">
-      <body className={`antialiased ${lexend.variable} ${mooli.variable} font-sans scroll-smooth`}>
+      <body className={`antialiased ${lexend.variable} ${mooli.variable} ${familjenGrotesk.variable} font-sans scroll-smooth`}>
         <Providers>
-          <Header />
-          {children}
-          <Footer />
+          <div className='relative overflow-hidden'>
+            <Header />
+            {children}
+            <Footer />
+
+          </div>
         </Providers>
       </body>
     </html>

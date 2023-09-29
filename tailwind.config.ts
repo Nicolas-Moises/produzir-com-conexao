@@ -17,7 +17,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         sans: 'var(--font-lexend)',
-        title: 'var(--font-recoleta)',
+        title: 'var(--font-familjen-grotesk)',
       },
       keyframes: {
         scaleIn: {
@@ -35,7 +35,18 @@ const config: Config = {
         'background-light': '#f7f5f2',
         zinc: {
           50: '#faf7f4'
-        }
+        },
+        pink: {
+          100: '#f3e2e6',
+          200: '#F3E2E6',
+          300: '#F0AAB4',
+          400: '#FF738C',
+          500: '#FE2B8F',
+          600: '#FF4478',
+          700: '#C8195A',
+          800: '#78003C',
+          900: '#3C2D37',
+        },
       }
     },
   },

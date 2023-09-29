@@ -20,7 +20,7 @@ export function Contact() {
                         Preencha o formulário abaixo, ou acesses nossas redes para acompanhar as atualizações!
                     </p>
                 </div>
-                <div className="flex bg-primary px-4 flex-col-reverse lg:flex-row items-center justify-center gap-20 lg:gap-20 gap-x-20 w-full mx-auto py-10 rounded-3xl mt-6">
+                <div className="flex bg-primary px-4 flex-col-reverse lg:flex-row items-center justify-center gap-20 lg:gap-20 gap-x-20 w-full max-w-2xl mx-auto py-10 rounded-3xl mt-6">
 
                     <form className="w-full max-w-2xl space-y-4">
                         <Input type="text" label="Nome" placeholder="Insira seu nome" />

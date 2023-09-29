@@ -54,14 +54,14 @@ export function Features() {
         <section className=" w-full relative overflow-hidden py-24 bg-background-light" id="cases">
             <div className="container flex flex-col items-center px-4">
                 <div className="flex flex-col items-center">
-                    <span className="text-sm font-semibold text-zinc-600 py-1 px-2 rounded-full border border-zinc-300 bg-zinc-500/10 mb-4">
+                    <span className="text-sm font-semibold text-zinc-600 text-center py-1 px-2 mb-4">
                         Encontre significado no seu trabalho através do autoconhecimento
                     </span>
                     <h2 className="text-5xl font-title font-bold tracking-tight text-black text-center">
                         Mentoria personificada
                     </h2>
                     <p className="text-zinc-800 text-lg max-w-4xl text-center mt-6">
-                        Com atuação no setor de joalheria, saúde, bem estar e educacional, oferecemos programas personalizados para desenvolver talentos e alcançar
+                        Com atuação no setor de joalheria, empresas de manufatura, desenvolvimento humano, saúde, bem estar e educacional, oferecemos programas personalizados para desenvolver talentos e alcançar
                         resultados, de acordo com as necessidades dos clientes.
                     </p>
                 </div>
@@ -75,7 +75,7 @@ export function Features() {
                         {solutions.map((item, i) => {
                             return (
                                 <AccordionItem
-                                    className="border border-black"
+                                    className=""
                                     key={item.id}
                                     aria-label={item.title}
                                     title={item.title}
