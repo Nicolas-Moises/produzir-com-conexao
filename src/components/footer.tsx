@@ -8,17 +8,17 @@ const links = [
     {
         id: 1,
         icon: Instagram,
-        href: '#',
+        href: 'https://www.instagram.com/produzircomconexao/',
     },
     {
         id: 2,
         icon: Linkedin,
-        href: '#',
+        href: 'https://www.linkedin.com/company/produzir-com-conex%C3%A3o/',
     },
     {
         id: 3,
         icon: Mail,
-        href: '#',
+        href: 'mailto:produzircomconexao@gmail.com',
     },
 ]
 
@@ -42,7 +42,7 @@ export function Footer() {
                         <div className="flex items-center gap-4">
                             {links.map(link => {
                                 return (
-                                    <Link href={link.href} key={link.id}>
+                                    <Link href={link.href} target="_blank" key={link.id}>
                                         <link.icon className="text-zinc-300 w-6 h-6 hover:text-primary" />
                                     </Link>
                                 )

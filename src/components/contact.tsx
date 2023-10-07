@@ -4,6 +4,7 @@ import { Button, Input, Textarea } from "@nextui-org/react"
 import star from '../../public/star.svg'
 import Image from "next/image"
 import { sendEmails } from "@/actions/send-email"
+import toast from "react-hot-toast";
 
 export function Contact() {
 
@@ -28,7 +29,15 @@ export function Contact() {
                     <form
                         className="w-full max-w-2xl space-y-4"
                         action={async (formData) => {
-                            await sendEmails(formData)
+                            const { data, error } = await sendEmails(formData)
+
+                            if (error) {
+                                console.log(error)
+                                toast.error('Algo deu errado!');
+                                return;
+                            }
+
+                            toast.success("Recemos sua mensagem com sucesso!");
                         }}>
                         <Input type="text" label="Nome" placeholder="Insira seu nome" name='name' required />
                         <Input type="text" label="WhatsApp" placeholder="Insira seu número do WhatsApp" name='phone' required />

@@ -31,11 +31,11 @@ export const sendEmails = async (formData: FormData) => {
             error: "Mensagem inválida"
         }
     }
-
+    let data
     try {
         resend.emails.send({
             from: 'Contato Website<onboarding@resend.dev>',
-            to: 'nicolas.nicc21@gmail.com', // produzircomconexao@gmail.com
+            to: 'produzircomconexao@gmail.com', // 
             subject: 'Temos interesse em agendar uma reunião!',
             reply_to: email as string,
             text: `Mensagem de ${name}: ${message} - Dados: telefone - ${phone}; e-mail - ${email}`
@@ -62,5 +62,8 @@ export const sendEmails = async (formData: FormData) => {
         } else {
             error: 'Algo deu errado'
         }
+    }
+    return {
+        data,
     }
 }

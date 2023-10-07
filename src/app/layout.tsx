@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import { Lexend, Familjen_Grotesk } from 'next/font/google'
 import { Providers } from "./providers"
 import 'keen-slider/keen-slider.min.css'
+import { Toaster } from "react-hot-toast";
 
 import Mooli from 'next/font/local'
 import { Footer } from '@/components/footer'
@@ -47,7 +48,7 @@ export default function RootLayout({
             <Header />
             {children}
             <Footer />
-
+            <Toaster position="top-right" />
           </div>
         </Providers>
       </body>
