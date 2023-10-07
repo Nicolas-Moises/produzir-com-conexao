@@ -8,7 +8,7 @@ import case5 from '../../public/case-5.jpeg'
 import hero from '../../public/hero.png'
 import case2 from '../../public/case-2.jpg'
 import hearts from '../../public/hearts.svg'
-import { Button } from "@nextui-org/react";
+import { Button, Link } from "@nextui-org/react";
 
 export function AboutUs() {
     return (
@@ -46,7 +46,14 @@ export function AboutUs() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row max-w-xs sm:max-w-none sm:items-center justify-center xl:justify-normal gap-4 w-full">
-                            <Button radius='sm' className="bg-pink-400 hover:opacity-80 text-white" size="lg" target="_blank" href="https://wa.me/5511983360953">
+                            <Button
+                                radius='sm'
+                                className="bg-pink-400 hover:opacity-80 text-white"
+                                size="lg"
+                                target="_blank"
+                                as={Link}
+                                href="https://wa.me/5511983360953"
+                            >
                                 Entre em contato
                             </Button>
                         </div>

@@ -8,6 +8,7 @@ import hippus from '../../public/hippus-aldeia.jpg'
 import recanto from '../../public/recanto-tia-fernanda.png'
 import pravaler from '../../public/pravaler.svg'
 import pandora from '../../public/pandora.svg'
+import alumna from '../../public/alumna.jpg'
 
 export function Companies() {
     return (
@@ -27,6 +28,9 @@ export function Companies() {
                 >
                     <div className="w-32 mx-8 lg:mx-10">
                         <Image src={lapimienta} alt="" className="w-full object-contain" />
+                    </div>
+                    <div className="w-32 mx-8 lg:mx-10">
+                        <Image src={alumna} alt="" className="w-full object-contain" />
                     </div>
                     <div className="w-32 mx-8 lg:mx-10 p-2 rounded-full bg-neutral-800">
                         <Image src={spira} alt="" className="w-full object-contain" />

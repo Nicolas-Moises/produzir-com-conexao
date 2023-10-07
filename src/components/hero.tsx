@@ -1,7 +1,8 @@
+'use client'
 import Image from "next/image";
 import stars from '../../public/shining-stars.svg'
 import hero from '../../public/features-2.png'
-import { Button } from '@nextui-org/button'
+import { Button, Link } from '@nextui-org/react'
 
 export function Hero() {
     return (
@@ -20,7 +21,13 @@ export function Hero() {
                         humano por meio do autoconhecimento.
                     </p>
                     <div className="flex flex-col sm:flex-row max-w-xs sm:max-w-none sm:items-center justify-center xl:justify-normal gap-4 w-full">
-                        <Button radius='sm' className="bg-pink-400 hover:opacity-80 text-white" size="lg" target="_blank" href="https://wa.me/5511983360953">
+                        <Button
+                            radius='sm'
+                            className="bg-pink-400 hover:opacity-80 text-white"
+                            size="lg"
+                            as={Link}
+                            target="_blank"
+                            href="https://wa.me/5511983360953">
                             Agendar uma reunião
                         </Button>
                     </div>
