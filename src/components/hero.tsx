@@ -5,9 +5,9 @@ import { Button } from '@nextui-org/button'
 
 export function Hero() {
     return (
-        <section className="w-full relative z-10 bg-zinc-800" id="home">
-            <div className="container flex flex-col xl:flex-row items-center gap-8 justify-between mx-auto overflow-hidden py-24 px-4">
-                <div className="relative max-w-2xl xl:py-0 px-6 xl:px-4 flex flex-col items-center xl:items-start justify-center ">
+        <section className="w-full relative z-10 bg-zinc-900" id="home">
+            <div className="container flex flex-col xl:flex-row gap-8 justify-between items-center xl:items-start  mx-auto overflow-hidden py-24 px-4">
+                <div className="relative max-w-2xl xl:py-0 px-6 xl:px-4 flex flex-col items-center xl:items-start ">
                     <Image className="absolute rotate-6 top-0 right-0 -z-10 w-20" alt="" src={stars} />
                     <span className="text-xs sm:text-sm font-medium text-pink-400 mt-10 mb-4">
                         Explore seu potencial
@@ -15,7 +15,6 @@ export function Hero() {
                     <h1 className="text-6xl mb-4 lg:text-7xl text-center xl:text-left font-bold tracking-tight font-title text-zinc-50">
                         Encontre sentido no que você faz por meio de quem você é
                     </h1>
-                    {/* <div className="w-full max-w-lg h-px bg-zinc-800 my-4" /> */}
                     <p className="mb-6 text-zinc-300 max-w-xl font-normal text-lg text-center xl:text-left">
                         Somos uma consultoria especializada em treinamento e desenvolvimento
                         humano por meio do autoconhecimento.

@@ -53,47 +53,48 @@ export function AboutUs() {
                     </div>
                 </div>
 
-                <div className=" bg-primary rounded-2xl p-6 mt-10">
-                    <div className="-m-1 flex flex-col sm:flex-row flex-wrap md:-m-2">
-                        <div className="flex sm:w-1/2 flex-wrap">
-                            <div className="w-1/2 p-1 md:p-2">
-                                <Image
-                                    alt="gallery"
-                                    className="block h-full w-full rounded-xl object-cover object-center"
-                                    src={preview} />
-                            </div>
-                            <div className="w-1/2 p-1 md:p-2">
-                                <Image
-                                    alt="gallery"
-                                    className="block h-full w-full rounded-xl object-cover object-center"
-                                    src={aboutus} />
-                            </div>
-                            <div className="w-full p-1 md:p-2">
-                                <Image
-                                    alt="gallery"
-                                    className="block aspect square rounded-xl object-cover object-center"
-                                    src={caseOne} />
-                            </div>
+                <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4 rounded-2xl p-6 mt-10">
+
+                    <div className="grid gap-4 auto-rows-min">
+                        <Image
+                            alt="gallery"
+                            className="h-auto max-w-full rounded-xl"
+                            src={aboutus}
+                        />
+                        <Image
+                            className="h-auto max-w-full rounded-xl"
+                            src={preview}
+                            alt=""
+                        />
+                    </div>
+                    <div className="grid gap-4">
+                        <div>
+                            <Image
+                                className="h-auto max-w-full rounded-xl"
+                                src={case5}
+                                alt=""
+                            />
                         </div>
-                        <div className="flex sm:w-1/2 flex-wrap">
-                            <div className="w-full p-1 md:p-2">
-                                <Image
-                                    alt="gallery"
-                                    className="block h-full w-full rounded-xl object-cover object-center"
-                                    src={hero} />
-                            </div>
-                            <div className="w-1/2 p-1 md:p-2">
-                                <Image
-                                    alt="gallery"
-                                    className="block h-full w-full rounded-xl object-cover object-right"
-                                    src={case5} />
-                            </div>
-                            <div className="w-1/2 p-1 md:p-2">
-                                <Image
-                                    alt="gallery"
-                                    className="block rounded-xl object-cover object-center aspect-square"
-                                    src={case2} />
-                            </div>
+                        <div className="h-min">
+                            <Image
+                                className="h-auto max-w-full rounded-xl"
+                                src={caseOne}
+                                alt=""
+                            />
+                        </div>
+                        <div>
+                            <Image
+                                className="h-auto max-w-full rounded-xl"
+                                src={hero}
+                                alt=""
+                            />
+                        </div>
+                        <div>
+                            <Image
+                                className="h-auto max-w-full rounded-xl"
+                                src={case2}
+                                alt=""
+                            />
                         </div>
                     </div>
                 </div>

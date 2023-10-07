@@ -33,9 +33,9 @@ export function Header() {
     const [color, setColor] = useState(false)
 
     return (
-        <header className={`w-full px-4 z-50 bg-zinc-800 transition-colors duration-150`}>
+        <header className={`w-full px-4 z-50 bg-zinc-900 transition-colors duration-150`}>
             <div className="flex items-center justify-center lg:justify-between container">
-                <Link href='/' className="w-28 h-28 flex items-center justify-center">
+                <Link href='/' className="w-36 h-36 md:w-28 md:h-28 flex items-center justify-center">
                     <Image className="w-full object-cover" src={logo} alt="" width={100} height={100} />
                 </Link>
 

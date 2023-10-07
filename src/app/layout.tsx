@@ -5,11 +5,8 @@ import { Lexend, Familjen_Grotesk } from 'next/font/google'
 import { Providers } from "./providers"
 import 'keen-slider/keen-slider.min.css'
 
-import shape from '../../public/bg-header.svg'
-
 import Mooli from 'next/font/local'
 import { Footer } from '@/components/footer'
-import Image from 'next/image'
 
 const lexend = Lexend({
   subsets: ['latin'],

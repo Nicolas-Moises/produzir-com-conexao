@@ -8,17 +8,17 @@ const links = [
     {
         id: 1,
         icon: Instagram,
-        href: '',
+        href: '#',
     },
     {
         id: 2,
         icon: Linkedin,
-        href: '',
+        href: '#',
     },
     {
         id: 3,
         icon: Mail,
-        href: '',
+        href: '#',
     },
 ]
 

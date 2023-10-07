@@ -2,6 +2,7 @@ import Image from "next/image"
 import Marquee from "react-fast-marquee"
 
 import lapimienta from '../../public/la-pimienta.png'
+import maescomcarreira from '../../public/maes-com-carreiras.jpg'
 import spira from '../../public/logo-spira.webp'
 import hippus from '../../public/hippus-aldeia.jpg'
 import recanto from '../../public/recanto-tia-fernanda.png'
@@ -15,14 +16,23 @@ export function Companies() {
                 <p className="text-zinc-700 uppercase font-semibold max-w-3xl text-center tracking-tight">
                     +10 times impactados com nossa mentoria.
                 </p>
-
-
-                <Marquee pauseOnHover autoFill className="mt-10" gradient gradientColor="rgb(255, 255, 255)" gradientWidth={200}>
+                <Marquee
+                    pauseOnHover
+                    autoFill
+                    className="mt-10"
+                    gradient
+                    gradientColor="rgb(255, 255, 255)"
+                    gradientWidth={200}
+                    speed={100}
+                >
                     <div className="w-32 mx-8 lg:mx-10">
                         <Image src={lapimienta} alt="" className="w-full object-contain" />
                     </div>
                     <div className="w-32 mx-8 lg:mx-10 p-2 rounded-full bg-neutral-800">
                         <Image src={spira} alt="" className="w-full object-contain" />
+                    </div>
+                    <div className="w-28 mx-8 lg:mx-10 p-2">
+                        <Image src={maescomcarreira} alt="" className="w-full object-contain rounded-full" />
                     </div>
                     <div className="w-32 mx-8 lg:mx-10">
                         <Image src={hippus} alt="" className="w-full object-contain" />
