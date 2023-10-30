@@ -47,6 +47,12 @@ const testimonials = [
         role: 'Coordenador de contabilidade e fiscal',
         content: 'Muito obrigado pelo empenho e pela entrega. Foi muito bom... Parabéns. Os pontos que você trouxe e apresentou foram assertivos com o momento que estamos passando'
     },
+    {
+        author: 'Natali Cara',
+        id: 8,
+        role: 'Empreendedora',
+        content: 'Minha experiência com a Erika tem sido transformadora. Desde que comecei a por em prática as mentorias tenho conquistado metas que antes pareciam inatingíveis. Sua abordagem empática e as perguntas poderosas que faz durante nossas sessões me ajudaram a ganhar clareza sobre meus objetivos e a desenvolver um plano de ação sólido. Sinto-me mais confiante e motivada a cada dia. Estou verdadeiramente grata por essa jornada de auto descoberta e crescimento pessoal.'
+    },
 ]
 export function Testimonials() {
     const [sliderRef, instanceRef] = useKeenSlider({

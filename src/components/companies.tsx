@@ -9,6 +9,7 @@ import recanto from '../../public/recanto-tia-fernanda.png'
 import pravaler from '../../public/pravaler.svg'
 import pandora from '../../public/pandora.svg'
 import alumna from '../../public/alumna.jpg'
+import natali from '../../public/natali-cara.png'
 
 export function Companies() {
     return (
@@ -49,6 +50,9 @@ export function Companies() {
                     </div>
                     <div className="w-32 mx-8 lg:mx-10">
                         <Image src={pandora} alt="" className="w-full object-contain" />
+                    </div>
+                    <div className="w-36 mx-8 lg:mx-10">
+                        <Image src={natali} alt="" className="w-full object-contain" />
                     </div>
                 </Marquee>
             </div>

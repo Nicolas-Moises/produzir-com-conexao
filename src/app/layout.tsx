@@ -32,7 +32,7 @@ const mooli = Mooli({
 
 export const metadata: Metadata = {
   title: 'Produzir com Conexão',
-  description: 'Consultoria Epecializada em treianmento e desenvolvimento Humano por meio do autoconhecimento',
+  description: 'Consultoria Epecializada em treinamento e desenvolvimento Humano por meio do autoconhecimento',
 }
 
 export default function RootLayout({
