@@ -16,7 +16,7 @@ export function Companies() {
         <section className="bg-white w-full rounded-b-3xl relative overflow-hidden px-4 ">
             <div className="container flex flex-col items-center pt-20 pb-24">
                 <p className="text-zinc-700 uppercase font-semibold max-w-3xl text-center tracking-tight">
-                    +10 times impactados com nossa mentoria.
+                    Alguns dos times impactados com nossa mentoria.
                 </p>
                 <Marquee
                     pauseOnHover
