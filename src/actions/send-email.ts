@@ -1,69 +1,48 @@
-"use server"
-import ContactFormEmail from '@/email/contact-form-email'
-import React from 'react'
-import { Resend } from 'resend'
+"use server";
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+import ContactFormEmail from "@/emails/contact-form-email";
+import { Resend } from "resend";
 
-export const sendEmails = async (formData: FormData) => {
-    const name = formData.get('name')
-    const phone = formData.get('phone')
-    const email = formData.get('email')
-    const message = formData.get('message')
+const resend = new Resend(process.env.RESEND_API_KEY);
 
-    if (!name || typeof name !== 'string') {
-        return {
-            error: "Nome inválido"
-        }
+type ContactFormFields = {
+  name: string;
+  phone: string;
+  email: string;
+  message: string;
+};
+
+export async function sendEmails(formData: FormData) {
+  const fields: ContactFormFields = {
+    name: formData.get("name") as string,
+    phone: formData.get("phone") as string,
+    email: formData.get("email") as string,
+    message: formData.get("message") as string,
+  };
+
+  // validação simples
+  for (const [key, value] of Object.entries(fields)) {
+    if (!value || typeof value !== "string") {
+      return { error: `Campo inválido: ${key}` };
     }
-    if (!phone || typeof phone !== 'string') {
-        return {
-            error: "Telefone inválido"
-        }
+  }
+
+  try {
+    const data = await resend.emails.send({
+      from: "Contato Website <onboarding@resend.dev>",
+      to: "produzircomconexao@gmail.com",
+      subject: "Contato de interesse Website",
+      react: ContactFormEmail(fields),
+      replyTo: fields.email,
+    });
+
+    if (data.error) {
+      return { error: data.error.message ?? "Erro ao enviar e-mail" };
     }
-    if (!email || typeof email !== 'string') {
-        return {
-            error: "E-mail inválido"
-        }
-    }
-    if (!message || typeof message !== 'string') {
-        return {
-            error: "Mensagem inválida"
-        }
-    }
-    let data
-    try {
-        resend.emails.send({
-            from: 'Contato Website<onboarding@resend.dev>',
-            to: 'produzircomconexao@gmail.com', // 
-            subject: 'Temos interesse em agendar uma reunião!',
-            reply_to: email as string,
-            text: `Mensagem de ${name}: ${message} - Dados: telefone - ${phone}; e-mail - ${email}`
-            // react: React.createElement(ContactFormEmail, {
-            //     message: message,
-            //     email: email,
-            //     name: name,
-            //     phone: phone,
-            // })
-        })
-    } catch (error: unknown) {
-        if (error instanceof Error) {
-            return {
-                error: error.message
-            }
-        } else if (error && typeof error === 'object' && 'message' in error) {
-            return {
-                error: error.message
-            }
-        } else if (typeof error === 'string') {
-            return {
-                error
-            }
-        } else {
-            error: 'Algo deu errado'
-        }
-    }
-    return {
-        data,
-    }
+
+    return { success: true };
+  } catch (err) {
+    console.error("Erro ao enviar e-mail:", err);
+    return { error: "Erro interno ao enviar e-mail" };
+  }
 }
