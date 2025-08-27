@@ -36,6 +36,8 @@ export async function sendEmails(formData: FormData) {
       replyTo: fields.email,
     });
 
+    console.log(data)
+
     if (data.error) {
       return { error: data.error.message ?? "Erro ao enviar e-mail" };
     }
