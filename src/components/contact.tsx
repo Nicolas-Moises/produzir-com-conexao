@@ -3,28 +3,59 @@
 import { Button, Input, Textarea } from "@nextui-org/react";
 import star from "../../public/star.svg";
 import Image from "next/image";
-import { sendEmails } from "@/actions/send-email";
 import toast from "react-hot-toast";
-import { useState, useRef } from "react";
+import { useState } from "react";
+import { sendEmail } from "@/service/send-email";
 
 export function Contact() {
+ const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
+  });
+
   const [isLoading, setIsLoading] = useState(false);
-  const formRef = useRef<HTMLFormElement>(null);
 
-  async function handleSubmit(formData: FormData) {
+  function handleChange(
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  }
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
     setIsLoading(true);
-    
-    const { success, error } = await sendEmails(formData);
 
-    if (error) {
-      toast.error(error);
-      setIsLoading(false);
-      return;
-    }
+    const form = new FormData();
+    form.append("name", formData.name);
+    form.append("phone", formData.phone);
+    form.append("email", formData.email);
+    form.append("message", formData.message);
 
-    if (success) {
+    try {
+      const result = await sendEmail(form);
+
+      if (result.status !== 200) {
+        toast.error(result.data?.message || "Ocorreu um erro, tente novamente.");
+        return;
+      }
+
       toast.success("Recebemos sua mensagem com sucesso!");
-      formRef.current?.reset();
+
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      toast.error("Erro ao enviar mensagem. Tente novamente.");
+    } finally {
       setIsLoading(false);
     }
   }
@@ -48,36 +79,43 @@ export function Contact() {
 
         <div className="flex bg-primary px-4 flex-col-reverse lg:flex-row items-center justify-center gap-20 w-full max-w-2xl mx-auto py-10 rounded-3xl mt-6">
           <form
-            ref={formRef}
-            action={handleSubmit}
             className="w-full max-w-2xl space-y-4"
+            onSubmit={handleSubmit}
           >
             <Input
               type="text"
               label="Nome"
               placeholder="Insira seu nome"
               name="name"
-              required
+              value={formData.name}
+              onChange={handleChange}
+              isRequired
             />
             <Input
               type="text"
               label="WhatsApp"
               placeholder="Insira seu número do WhatsApp"
               name="phone"
-              required
+              value={formData.phone}
+              onChange={handleChange}
+              isRequired
             />
             <Input
               type="email"
               label="E-mail"
               placeholder="Insira seu e-mail"
               name="email"
-              required
+              value={formData.email}
+              onChange={handleChange}
+              isRequired
             />
             <Textarea
               label="Mensagem"
               placeholder="Quais são suas dúvidas?"
               name="message"
-              required
+              value={formData.message}
+              onChange={handleChange}
+              isRequired
             />
             <Button
               type="submit"
